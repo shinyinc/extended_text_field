@@ -147,16 +147,16 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.5.0"
+    version: "0.6.0"
   extended_text_library:
     dependency: transitive
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "903cdd3704fd4823eae794e16b6b4cd9cabaae89"
-      url: "https://github.com/shinyinc/extended_text_library.git"
+      resolved-ref: "40490b099b867283f3326f93160193bfaad9e169"
+      url: "https://github.com/kekland/extended_text_library.git"
     source: git
-    version: "0.5.3"
+    version: "0.6.0"
   fake_async:
     dependency: transitive
     description:
