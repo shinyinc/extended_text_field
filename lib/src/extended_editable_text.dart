@@ -20,6 +20,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
 
+import 'extended_render_editable.dart';
+
 /// Signature for the callback that reports when the user changes the selection
 /// (including the cursor location).
 typedef SelectionChangedCallback = void Function(
@@ -1623,7 +1625,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
     return widget.selectionEnabled &&
             _hasFocus &&
             controls?.canCopy(this) == true
-        ? () => controls.handleCopy(this)
+        ? () => controls.handleCopy(this, null)
         : null;
   }
 
@@ -1769,7 +1771,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
 
     String text = _value.text;
     if (widget.obscureText) {
-      text = RenderEditable.obscuringCharacter * text.length;
+      text = ExtendedRenderEditable.obscuringCharacter * text.length;
       final int o =
           _obscureShowCharTicksPending > 0 ? _obscureLatestCharIndex : null;
       if (o != null && o >= 0 && o < text.length)
@@ -1789,6 +1791,12 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
 
   @override
   TextEditingValue get currentTextEditingValue => _value;
+
+  @override
+  AutofillScope get currentAutofillScope => null;
+
+  @override
+  void showAutocorrectionPromptRect(int start, int end) {}
 }
 
 class _Editable extends MultiChildRenderObjectWidget {

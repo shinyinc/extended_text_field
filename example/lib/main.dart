@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
                 : TransparentMaterialPageRoute(
                     settings: settings, builder: (c) => page);
 //            return FFTransparentPageRoute(
-//                settings: settings,
+  
 //                pageBuilder: (BuildContext context, Animation<double> animation,
 //                        Animation<double> secondaryAnimation) =>
 //                    page);
