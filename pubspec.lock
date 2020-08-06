@@ -48,8 +48,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "40490b099b867283f3326f93160193bfaad9e169"
-      url: "https://github.com/kekland/extended_text_library.git"
+      resolved-ref: "07fd1332ac0de1a74d442adbaedafb7f3701ad89"
+      url: "https://github.com/shinyinc/extended_text_library.git"
     source: git
     version: "0.6.0"
   fake_async:

@@ -14,7 +14,7 @@ dependencies:
   # extended_text_library: ^0.5.3
   extended_text_library:
     git:
-      url: https://github.com/kekland/extended_text_library.git
+      url: https://github.com/shinyinc/extended_text_library.git
 
 dev_dependencies:
   flutter_test:
