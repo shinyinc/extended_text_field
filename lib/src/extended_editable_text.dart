@@ -1,11 +1,6 @@
 ///  create by zmtzawqlp on 2019/4/25
 ///  base on flutter sdk 1.7.8
 ///
-
-// Copyright 2015 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'dart:async';
 import 'dart:math';
 import 'dart:ui' as ui;
@@ -13,12 +8,12 @@ import 'dart:ui' as ui;
 import 'package:extended_text_field/src/extended_render_editable.dart';
 import 'package:extended_text_library/extended_text_library.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart' show DragStartBehavior;
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/gestures.dart' show DragStartBehavior;
 
 import 'extended_render_editable.dart';
 
@@ -1917,7 +1912,10 @@ class _Editable extends MultiChildRenderObjectWidget {
       textScaleFactor: textScaleFactor,
       textAlign: textAlign,
       textDirection: textDirection,
-      locale: locale ?? Localizations.localeOf(context, nullOk: true),
+      locale: locale ??
+          Localizations.localeOf(
+            context,
+          ),
       selection: value.selection,
       offset: offset,
       onSelectionChanged: onSelectionChanged,
@@ -1956,7 +1954,7 @@ class _Editable extends MultiChildRenderObjectWidget {
       ..textScaleFactor = textScaleFactor
       ..textAlign = textAlign
       ..textDirection = textDirection
-      ..locale = locale ?? Localizations.localeOf(context, nullOk: true)
+      ..locale = locale ?? Localizations.localeOf(context)
       ..selection = value.selection
       ..offset = offset
       ..onSelectionChanged = onSelectionChanged
